@@ -1,0 +1,70 @@
+<!-- <text>哈哈</text> -->
+
+
+  <!-- <block wx:for="{{blogs}}" wx:key="blog_id">
+      <view>{{index}}</view>
+      <view>{{item}}</view>
+      <text>{{item}}</text>
+      <template is="blogItem" data="{{item}}"> </template>
+  </block> -->
+
+
+<view class="section" style='display:flex'>
+          <view><input value='{{search}}' placeholder="搜索你想要的内容" bindconfirm= "search" confirm-type= "search"  /></view>
+          <view class="btn-area">
+                <!-- <button bindtap="bindButtonTap" >搜索</button> -->
+          </view>
+  </view>
+
+<view class='container'>
+
+
+
+
+
+
+
+
+    <scroll-view scroll-y="true" class="container" upper-threshold="5" bindscrolltoupper="upper">
+      <block wx:for="{{blogs}}" wx:key="post_id">
+        <template is="blogItem" data="{{item}}"> </template>
+      </block>
+    </scroll-view>
+
+
+</view>
+
+
+
+<template name="blogItem">
+  
+  
+  <view class='oneblog' bindtap='bindViewTap' data-post_id="{{item.post_id}}">
+    <view class= "header">
+      <view class='avatar'>
+        <image src='{{item.avatar}}'></image>
+      </view>
+      <text class='nickname'>{{item.nickname}}</text>
+      <text class='create-time'>{{item.create_time}}</text>
+    </view>
+
+
+    <view class='body-content'>
+      <view class='content-detail'>
+        <text class="content-title">{{item.title}}</text>
+      </view>
+
+      <view class='static-body'>
+        <view>
+          <text class='static-body-text'>{{item.content}} </text>
+        </view>
+      </view>
+
+      <view class='static-action'>
+        阅读({{item.times}})；评论({{item.commentNum}}); 顶({{item.diggs}})
+      </view>
+    </view>
+
+
+  </view>
+</template>

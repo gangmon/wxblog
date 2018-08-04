@@ -1,0 +1,75 @@
+<!--pages/chat/chat.wxml-->
+<text>pages/chat/chat.wxml</text>
+
+<view class="talk" style='height: 100%;'>
+      <scroll-view bindscroll="scroll" class="sscc" style='height:64vh;top:424rpx;position:fixed;' scroll-y="true" scroll-top="{{scrollTop}}" scroll-with-animation="true" scroll-into-view="ggg{{fgg}}" bindscrolltolower="bottomload" bindscrolltoupper="topLoad">
+        <view>
+          <view style="margin-top:15rpx;" wx:for="{{todos}}" wx:key="id" wx:for-index="xiabiao1">
+            <view wx:if="{{item.text.text!='#$#'&&item.text.text!=-1}}" class="{{item.text.openid==openid?'flexx1':'flexx'}}">
+              <view class="{{item.text.openid==openid?'sss':'sss2'}}" data-xiabiao='{{xiabiao1}}' data-openid='{{item.text.openid}}' data-name='{{item.text.name}}' bindtap="lahei">
+                <image wx:if="{{item.text.url}}" class="{{item.text.openid==openid?'headimage1':'headimage'}}" src="{{item.text.url}}" mode="aspecFill" />
+                <image wx:if="{{!item.text.url}}" class="{{item.text.openid==openid?'headimage1':'headimage'}}" src="../../image/toux.png" />
+              </view>
+              <view wx:if="{{xiabiao==xiabiao1&&item.text.openid!=openid}}" bindtap="qrta" class='laheikuang'>@ta</view>
+              <view wx:if="{{lajin==2&&zhuchi=='block'&&xiabiao==xiabiao1&&item.text.openid!=openid}}" bindtap="qrjiejins" class='laheikuang1'>解禁</view>
+              <view wx:if="{{lajin==1&&zhuchi=='block'&&xiabiao==xiabiao1&&item.text.openid!=openid}}" bindtap="qrlahei" class='laheikuang1'>拉黑</view>
+              <view wx:if="{{item.text.types > 5&&item.text.types!=44&&item.text.types!=28}}" class="{{item.text.openid==openid?'says23':'says3'}}"></view>
+              <view wx:if="{{item.text.types < 5}}" class="{{item.text.openid==openid?'says2':'says'}}"></view>
+              <view class="{{item.text.openid==openid?'say2new':'say2new2'}}">
+
+                <view wx:if="{{item.text.types==2}}" class="{{item.text.openid==openid?'say2':'say'}}" style="background-color:#e9e9e9">
+                  <view class="title">
+                    <text style="color:#E0AA2D">出价：{{item.text.text}}</text>
+                  </view>
+                </view>
+                <view wx:if="{{item.text.types==28}}" class="{{item.text.openid==openid?'say2':'say'}}" style="background-color:#e9e9e9">
+                  <view class="title">
+                    <text style="color:#E0AA2D">委托出价：{{item.text.text}}</text>
+                  </view>
+                </view>
+                <view wx:if="{{item.text.types==44}}" class="{{item.text.openid==openid?'bsay2':'bsay'}}">
+                  <view class="title">
+                    <image class='bqbtu' src="{{item.text.text}}" mode="aspecFill"></image>
+                  </view>
+                </view>
+                <view wx:if="{{item.text.types > 5&&item.text.types!=28&&item.text.types!=44}}" class="{{item.text.openid==openid?'say2':'say'}}" style="color: #fff;background-color:#B43E2A;border-color: #B43E2A;">
+
+                  <view wx:if="{{item.text.types==7}}" style='height:50rpx;'>
+                    <view bindtap="playrecorder" style='display:flex' data-xiab='{{xiabiao1}}' data-yy="https://baopai.oss-cn-beijing.aliyuncs.com/{{item.text.text}}">
+                      <view style='color:{{xb==xiabiao1?"#ccc":"#fff"}};'>语音消息</view>
+                      <view style='margin-left:10rpx;margin-top:4rpx;'>
+                        <image style='width:36rpx;height:36rpx;' src="../../image/{{xb==xiabiao1?'play.gif':'yy.png'}}" mode="aspecFill"></image>
+                      </view>
+                    </view>
+                  </view>
+                  <view wx:if="{{item.text.types!=7&&item.text.types!=44}}" class="title">
+                    <text selectable="true">{{item.text.text}}</text>
+                  </view>
+                </view>
+                <view wx:if="{{item.text.types==3}}" class="{{item.text.openid==openid?'say2':'say'}}" style="background-color:#e9e9e9">
+                  <view class="title">
+                    <text selectable="true">{{item.text.text}}</text>
+                  </view>
+                </view>
+              </view>
+            </view>
+          </view>
+
+          <view wx:if="{{zhuchi == 'none'}}" style="height:100rpx;opacity: 0;">
+            <view class="flexx2" style="opacity: 0;" id="ggg{{todos.length}}">
+              gfdgf
+            </view>
+          </view>
+          <view wx:if="{{zhuchi == 'block'}}" style="height:210rpx;opacity: 0;">
+            <view class="flexx2" style="opacity: 0;" id="ggg{{todos.length}}">
+              gfdgf
+            </view>
+          </view>
+          <view wx:if="{{phonemodel!='iPhon'}}" style="height:50rpx;opacity: 0;">
+            <view class="flexx2" style="opacity: 1;">> gfdgf
+            </view>
+          </view>
+        </view>
+
+      </scroll-view>
+    </view>

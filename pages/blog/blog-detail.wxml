@@ -1,0 +1,67 @@
+<!--pages/blog/blog-detail.wxml-->
+<!-- <text>pages/blog/blog-detail.wxml</text> -->
+
+<import src="blog.wxml" />
+<view class="container">
+  <template is="blogItem" data="{{item}}" />
+  
+
+  
+</view>
+<view class="create-comment">发表评论</view>
+
+<form bindsubmit='bindSaveComment'>
+      <textarea name="content"  type="text" maxlength='1000' class='textarea'  value='{{title_clear}}'></textarea>
+
+       <button type='primary' class='save-btn' form-type='submit' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo" data-post_id='{{item.post_id}}'>提交</button> 
+</form>
+      
+
+
+
+
+
+
+
+ 
+    <scroll-view scroll-y="true" class="container" upper-threshold="5" bindscrolltoupper="upper">
+        <block wx:for="{{comments}}" wx:key="id">
+             <template is="blog-detail-Item" data="{{item}}"> </template>
+        </block>
+    </scroll-view> 
+
+
+
+
+
+
+
+
+<template name="blog-detail-Item">
+  
+  
+  <view class='oneblog'  data-post_id="{{item.post_id}}">
+    <view class= "header">
+      <view class='avatar'>
+        <image src='{{item.avatar}}'></image>
+      </view>
+      <text class='nickname'>{{item.nickname}}</text>
+      <text class='create-time'>{{item.create_time}}</text>
+    </view>
+
+
+    <view class='body-content'>
+      
+
+      <view class='static-body'>
+        <view>
+          <text class='static-body-text'>{{item.title}} </text>
+        </view>
+      </view>
+
+
+    </view>
+
+
+  </view>
+</template>

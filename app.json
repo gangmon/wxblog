@@ -1,0 +1,53 @@
+{
+  "pages":[
+    "pages/chat/chat",
+    
+    "pages/blog/blog",
+    "pages/qrcode/qrcode",
+    "pages/create/create",
+    "pages/template/template",
+    "pages/my/my",        
+    "pages/blog/blog-detail",
+    
+    
+  
+    "pages/index/index",
+    "pages/logs/logs"
+   
+  ],
+
+
+  "tabBar":{
+    "list":[
+      {
+        "pagePath":"pages/blog/blog",
+        "text":"新鲜事",
+        "iconPath": "image/word.png",
+        "selectedIconPath": "image/word.png"
+      },
+      {
+        "pagePath": "pages/create/create",
+        "text": "分享",
+        "iconPath":"image/addpost.png",
+        "selectedIconPath":"image/addpost.png"
+      },
+      {
+        "pagePath": "pages/qrcode/qrcode",
+        "text": "我的",
+        "iconPath": "image/person.png",
+        "selectedIconPath": "image/person.png"
+      }
+     
+  ]
+  },
+
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "blog",
+    "navigationBarTextStyle":"black",
+    "enablePullDownRefresh": true
+  },
+
+  "debug":true
+}

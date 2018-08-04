@@ -1,0 +1,43 @@
+.container{
+  min-height: 100%;
+  overflow: hidden;
+  overflow-y: hidden;
+
+}
+.userinfo{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50rpx 0;
+  width: 750rpx;
+  background: red;
+}
+.userinfo-avatar{
+
+  width: 160rpx;
+  height: 160rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+.userinfo-nickname{
+  margin-top:20rpx;
+  color: #fff;
+  /* font-size: 34rpx;  */
+}
+
+.my-item{
+  display: flex;
+  flex-direction: row;
+  margin: 100rpx;
+  border-bottom: 2rpx solid red;
+  height: 100rpx;
+  line-height: 60rpx;
+
+}
+.little-item{
+  display: block;
+  margin: 40rpx;
+}
+.my-item-nav{
+  margin-top: 22rpx;
+}

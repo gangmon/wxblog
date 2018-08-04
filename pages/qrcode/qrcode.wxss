@@ -1,0 +1,48 @@
+/* pages/qrcode/qrcode.wxss */
+
+.container{
+  padding:0rpx 40rpx;
+}
+.blank{
+  height: 62rpx;
+}
+
+
+
+
+/*用户信息  */
+
+.user_photo {
+  height: 200rpx;
+  width: 200rpx;
+  margin-left: 275rpx;
+  margin-top: 10rpx;
+}
+
+.user_name {
+  height: 66rpx;
+  width: 100%;
+  text-align: center;
+  line-height: 154rpx;
+  font-size: 34rpx;
+  margin-bottom: 45rpx;
+}
+
+.user_photo_border {
+  background: 0;
+  height: 200rpx;
+  width: 200rpx;
+  position: absolute;
+  border-radius: 50%;
+  border: 50rpx solid #fff;
+  margin-left: 225rpx;
+  margin-top: -46rpx;
+}
+/* 二维码图片  */
+.scanimg{
+  height: 450rpx;
+  width: 450rpx;
+  margin-left: 150rpx;
+  margin-top: 5rpx;
+  margin-bottom: 25rpx;
+}

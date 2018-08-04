@@ -1,0 +1,91 @@
+
+.container{
+  background-color: #f5f5f9;
+  justify-content: initial;
+  font-size: 30rpx;
+  /* margin: 20rpx; */
+  padding:0rpx 30rpx;
+  bottom: -13rpx;
+}
+.title-all{
+  display: flex;
+
+}
+textarea{
+  font-size: 38rpx;
+}
+
+.title{
+
+  flex-direction: row; 
+  width: 180rpx;
+  line-height: 83rpx;
+  font-size: 43rpx;
+	display: flex;
+  
+  /* border-top: 13rpx; */
+	/* padding: 0 30rpx; */
+   padding-top: 21rpx; 
+  /* margin-top:20rpx;  */
+	/* background: red; */
+	 background: #f9f9f9; 
+}
+ .title-content{
+  width: 100%;
+  background: #fff;
+	border-top: 1rpx solid #ddd;
+	border-bottom: 1rpx solid #ddd;
+  font-size: 45rpx
+} 
+.center{
+  color:burlywood;
+   padding-top: 10rpx; 
+  /* height: 60rpx; */
+}
+.input{
+  height: 100rpx;
+  font-size: 40rpx;
+}
+.content-header{
+  text-align: center;
+  font-size: 70rpx;
+  font-family: "Times New Roman"
+
+}
+
+.content-input{
+
+  width: 100%;
+  background: #fff;
+	border-top: 1rpx solid #ddd;
+	border-bottom: 1rpx solid #ddd;
+
+  
+}
+.save-btn{
+  background-color: yellow;
+  color: #fff;
+  /* border: 50rpx */
+}
+button[type="default"]{
+  background-color: #fff;
+  width: 690rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+  
+}
+button[type="primary"]{
+  background-color: green;
+  width: 690rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  margin-top: 30rpx;
+  border-radius: 6rpx;
+  box-sizing: border-box;
+
+}

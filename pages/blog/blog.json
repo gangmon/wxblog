@@ -1,0 +1,9 @@
+{
+    "window": {
+      "backgroundTextStyle": "light",
+      "navigationBarBackgroundColor": "#fff",
+      "navigationBarTitleText": "新鲜事儿",
+      "navigationBarTextStyle": "white",
+      "enablePullDownRefresh": true
+    }
+}

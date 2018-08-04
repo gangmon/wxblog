@@ -1,0 +1,42 @@
+<!--pages/qrcode/qrcode.wxml-->
+
+
+
+    <block  wx:if="{{boolr}}">
+         <image class="scanimg" src="{{qrcodeimgPath}}" bindtap="getAgain"></image> 
+        <!-- <image class="scanimg" src="https://fangkemi.xyz/careapi/api/web/qrcode/code-131529683536.jpg" bindtap="getAgain"></image> -->
+    </block >
+     
+     <block wx:else="{{boolr}}"> 
+
+        <view class="user_photo_border"></view>
+          <view class="user_photo">
+            <open-data type="userAvatarUrl"></open-data>
+          </view>
+
+        <view class="user_name">欢迎您!  
+        <open-data style="font-size:40rpx;"  type="userNickName" lang="zh_CN"></open-data>
+        </view>
+
+     </block> 
+
+
+
+<view class='container'>
+    
+     
+
+   
+    <button type="primary" bindtap="primary">点击生成二维码</button>
+    <view class='blank'></view>
+    <button type='default' open-type='share'>分享二维码</button>
+    <view class='blank'></view>
+    <!-- <button class='' bindtap='sendmessage'>模板消息内容</button> -->
+    <form report-submit='true' bindsubmit='formSubmit' bindreset='formReset'>
+      <button formType="submit" type='primary'>发送模版消息</button> 
+     <!-- <button formType="submit" type='primary' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">发送模版消息</button>  -->
+    </form>
+
+</view>
+    
+

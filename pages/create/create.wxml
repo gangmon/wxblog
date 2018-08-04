@@ -1,0 +1,34 @@
+
+<view class='container'>
+
+  <form bindsubmit="bindSave"  style='' >  
+      <view class='title-all' >
+          <view class='title'>  标题：</view>
+          <view class='title-content'>
+                 <input class= 'input' name="title" type='text' placeholder='标题内容' value="{{title}}"  placeholder-class="center"> </input>
+          </view>
+      </view>  
+
+    <view class='content'>
+      <view class='content-header'>内容</view> 
+      <view class='content-input' style=''>
+        <textarea name="content"  type="text" maxlength='1000' placeholder='来点段子.......'  placeholder-style='text-align:center;font-size:80rpx; color:burlywood;' value='{{content}}'></textarea>
+      </view>
+    </view>
+    <view>
+          
+          <!-- <button type='primary' class='save-btn' form-type='submit'>保存</button> -->
+          <!-- 上传图片 -->
+          <view class="cview">
+                <button bindtap="bindimgshow">选择图片并上传</button>
+          </view>
+
+          <button type='primary' class='save-btn' form-type='submit' open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">保存</button>
+          <button type='default' class='cancel-btn' bindtap='bindCancel'>取消</button>
+
+          <!-- <button class='save-btn' lang="zh_CN" open-type='getUserInfo' bindgetuserinfo="onGotUserInfo">点击快速微信授权以发表内容</button> -->
+    </view>
+
+
+  </form>
+</view>
